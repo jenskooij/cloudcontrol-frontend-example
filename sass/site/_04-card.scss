@@ -140,7 +140,9 @@ $card-list-icon-holder-size: 6em;
   }
 }
 
-.one-column-full.card {
+.one-column-full {
+  @extend .card;
+
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
