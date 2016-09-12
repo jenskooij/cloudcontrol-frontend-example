@@ -1,0 +1,50 @@
+@import "../includes/breakpoints";
+@import "../includes/helpers";
+
+$grid-width-desktop: 1280px;
+
+body {
+  background-color: $body-color;
+  font-family: $main-font;
+  color: $main-text-color;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-weight:600;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+%column {
+  margin: 0px auto;
+  @include breakpoint(desktop) {
+    width: 100%;
+    max-width: $grid-width-desktop;
+  }
+}
+
+.one-column,
+.two-column,
+.three-column{
+  @extend %column;
+}
+
+.two-column,
+.three-column{
+  margin:-0.5em auto;
+  margin-top:0;
+}

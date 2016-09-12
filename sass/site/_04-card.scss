@@ -1,0 +1,140 @@
+@import "../includes/helpers";
+
+$card-list-icon-holder-size:6em;
+
+.card {
+  .two-column & {
+    @include breakpoint(desktop) {
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+      vertical-align: top;
+      width: 47%;
+      margin: 1em;
+    }
+  }
+
+  .three-column & {
+    @include breakpoint(desktop) {
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+      vertical-align: top;
+      width: 30%;
+      margin: 1em;
+    }
+  }
+
+  margin: 1em 0;
+  padding: 3em;
+  background-color: $main-color-negative;
+  -webkit-box-shadow: 1px 1px 5px darken($main-color-negative, 20%);
+  -moz-box-shadow: 1px 1px 5px darken($main-color-negative, 20%);
+  box-shadow: 1px 1px 5px darken($main-color-negative, 20%);
+
+  .card-title {
+    margin-bottom: 0.5em;
+    font-size: 2em;
+  }
+
+  .card-footer {
+    border-top: 1px solid darken($body-color, 5%);
+    margin: 0 -3em;
+    padding: 1em 3em;
+    margin-bottom: -3em;
+    margin-top: 3em;
+  }
+
+  .card-link {
+    color: $main-color;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      color: $main-text-color;
+    }
+  }
+
+  .card-list {
+    margin:1em 0;
+    .card-list-item {
+      display: table;
+
+      .card-list-icon {
+        .card-list-icon-holder {
+          width:$card-list-icon-holder-size;
+          height:$card-list-icon-holder-size;
+          line-height:$card-list-icon-holder-size;
+          background-color:$main-color;
+          color:$main-color-negative;
+          text-align:center;
+          margin:0 1em;
+          border-radius:50%;
+
+          .fa {
+            font-size:$card-list-icon-holder-size / 3;
+            vertical-align:middle;
+          }
+        }
+      }
+
+      .card-list-icon,
+      .card-list-content {
+        display: table-cell;
+        vertical-align:top;
+      }
+
+      .card-list-content {
+        padding-left:2em;
+      }
+    }
+  }
+
+  &.card-image-container {
+    display: table;
+    padding: 0;
+
+    .card-image {
+      display: table-cell;
+      width: 20%;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .card-image-content {
+      display: table-cell;
+      width: 80%;
+      padding: 3em;
+    }
+
+    .card-footer {
+      margin-top: 1em;
+    }
+
+    .two-column & {
+      @extend %inlineblock;
+
+      .card-image {
+        width: 40%;
+      }
+
+      .card-image-content {
+        width: 60%;
+      }
+    }
+
+    .three-column & {
+      @extend %inlineblock;
+
+      .card-image,
+      .card-image-content {
+        width: 100%;
+        display: block;
+      }
+
+      .card-image {
+        height: 10em;
+      }
+    }
+  }
+}

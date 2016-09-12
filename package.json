@@ -1,0 +1,20 @@
+{
+  "name": "cloud-control-frontend",
+  "description": "The frontend for the Cloud Control framework",
+  "author": "Jens Kooij <jenskooij1988@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jenskooij/cloudcontrol"
+  },
+  "license": "MIT",
+  "version": "0.0.5",
+  "dependencies": {
+    "grunt": "~1.0.0",
+    "compass": "~0.1.1",
+    "grunt-contrib-compass": "~1.1.1",
+    "grunt-contrib-jshint": "~1.0.0",
+    "grunt-contrib-concat": "~1.0.1",
+    "grunt-contrib-uglify": "~1.0.1",
+    "grunt-contrib-watch": "~1.0.0"
+  }
+}
